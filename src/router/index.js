@@ -13,6 +13,7 @@ const HAS_LOGINED = true
 
 router.beforeEach((to, from, next) => {
   // 路由元信息
+  // 可以对每个组件设置title
   to.meta && setTitle(to.meta.title)
   if (to.name !== 'login') {
     if (HAS_LOGINED) next()
